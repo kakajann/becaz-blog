@@ -29,10 +29,11 @@ module.exports = {
   rules: {
     'semi': [1, 'never'],
     'react/jsx-filename-extension': [1, { 'extensions': ['.ts', '.tsx'] }],
+    'import/no-unresolved': 'off',
+    'no-undef': 'off',
     'react/jsx-props-no-spreading': [1, {
         'custom': 'ignore',
     }],
-    'import/no-unresolved': 'off'
   },
   settings: {
     'import/resolver': {
