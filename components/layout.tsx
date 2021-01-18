@@ -11,6 +11,7 @@ const Layout = ({ children, meta }: P) => (
     <Head>
       <title>{meta?.title}</title>
       <meta name="description" content={meta?.description} />
+      <link rel="icon" type="image/png" href="images/favicon.png" />
     </Head>
     <Header />
     { children }
