@@ -1,3 +1,5 @@
+import Spinner from 'components/templates/spinner'
+
 interface P {
   blogs: BlogItem[]
   loading: boolean
@@ -6,7 +8,7 @@ const HomeBlogList = ({ blogs, loading }: P) => (
   <div id="blogs">
 
     {loading && (
-      <p>Loading</p>
+      <Spinner />
     )}
 
     {!loading && !blogs.length && (

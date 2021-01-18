@@ -9,7 +9,7 @@ interface P {
 
 const HomeService = ({ children }: P) => {
   const [blogs, setBlogs] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
   }, [])
