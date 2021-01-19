@@ -1,6 +1,10 @@
+import SearchBar from 'components/home/search'
+import HomeCategories from 'components/home/categories'
+
 const HomeSidebar = () => (
   <div id="sidebar">
-    <p>Sidebar</p>
+    <SearchBar />
+    <HomeCategories />
   </div>
 )
 

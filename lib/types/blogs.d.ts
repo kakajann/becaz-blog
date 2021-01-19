@@ -1,17 +1,8 @@
-type Author = {
-  fullname: string
-}
-
-type Category = {
-  id: number
-  title: string
-}
-
 type BlogItem = {
-  slug: string
+  key: string
   title: string
-  description: string
-  author: Author
-  category: Category
-  publishedAt: string
+  abstract: string
+  'author_name': string
+  category: string
+  'published_at': string
 }

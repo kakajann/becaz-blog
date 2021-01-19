@@ -21,7 +21,7 @@ const HomeBlogList = ({ blogs, loading }: P) => (
 
     <div id="blogs-list">
       {!loading && blogs.length > 0 && blogs.map((blog: BlogItem) => (
-        <HomeBlogListItem blog={blog} />
+        <HomeBlogListItem key={blog.key} blog={blog} />
       ))}
     </div>
 

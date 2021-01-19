@@ -1,10 +1,11 @@
 @import normalize
+@import mixins
 @import fonts
 @import colors
 @import theme
 
 header
-  box-shadow: 0 10px 15px rgba(0,0,0,.05)
+  box-shadow: 0 10px 15px #b3adad0d
   .container
     height: 74px
   .flex
@@ -16,6 +17,18 @@ header
   .logo
     img
       height: 34px
+  a.back
+    display: inline-flex
+    justify-content: center
+    transition: color 180ms ease
+    &:hover
+      color: $baseBlue
+      svg path
+        fill: $baseBlue
+    svg
+      margin-right: 7px
+      path
+        transition: fill 180ms ease
 
 #home 
   display: flex
@@ -24,7 +37,7 @@ header
   #blogs
     width: 60%
   #sidebar
-    width: 25%
+    width: 30%
 
 #blogs-list
   .blog-item
@@ -42,4 +55,60 @@ header
       font-size: 16px
       line-height: 26px
       color: $grayish
-    
+    .author
+      margin-bottom: 15px
+      @include verticalCentered()
+    span
+      color: #B7B7B7
+      a
+        color: #B7B7B7
+        @include verticalCentered()
+        @include linkTransition()
+        &:hover
+          color: $baseBlue
+          svg path
+            fill: $baseBlue
+      svg
+        margin-right: 7px
+        path
+          fill: #B7B7B7
+          @include linkTransition(fill)
+    .more-info
+      @include verticalCentered(flex)
+    .dash
+      margin: 0 15px
+
+.sidebar-search
+  display: flex
+  input
+    border: none
+    border-bottom: 1px solid $grayish
+    padding: 10px 15px
+    width: 100%
+    outline: none
+  button
+    background: none
+    border: none
+    border-bottom: 1px solid $grayish
+    width: 50px
+    cursor: pointer
+    justify-content: center
+    @include verticalCentered()
+    svg
+      path
+        fill: $grayish
+
+#categories
+  display: flex
+  flex-direction: column
+  margin-top: 2em
+  a
+    color: $grayish
+    padding: 15px 25px
+    border-radius: 8px
+    @include linkTransition()
+    &.active
+      background: rgba($baseBlue, .1)
+      color: $baseBlue
+    &:hover
+      color: $baseBlue

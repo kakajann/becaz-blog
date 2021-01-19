@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Icon from 'components/templates/icon'
 
 const Header = () => (
   <header>
@@ -9,7 +10,10 @@ const Header = () => (
             <img src="images/logo.svg" alt="Becaz Logo" />
           </a>
         </Link>
-        <a href="https://becaz.com">Back to Becaz.com</a>
+        <a href="https://becaz.com" className="back">
+          <Icon title="return" size={16} />
+          Back to Becaz.com
+        </a>
       </div>
     </div>
   </header>

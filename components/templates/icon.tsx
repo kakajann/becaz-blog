@@ -1,3 +1,4 @@
+// @ts-nocheck
 import icons from 'lib/constants/iconPaths.json'
 
 interface P {
@@ -7,8 +8,8 @@ interface P {
 }
 
 const Icon = ({ title, size, color }: P) => {
-  // const { [title]: icon } = icons
-  const { d, viewBox } = icons.user
+  const { [title]: icon } = icons
+  const { d, viewBox } = icon
 
   return (
     <svg height={size} width={size} viewBox={viewBox}>

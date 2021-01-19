@@ -2,16 +2,16 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: [
     'airbnb',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
-    React: 'readonly'
+    React: 'readonly',
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -27,21 +27,23 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    'semi': [1, 'never'],
-    'react/jsx-filename-extension': [1, { 'extensions': ['.ts', '.tsx'] }],
+    semi: [1, 'never'],
+    'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'import/no-unresolved': 'off',
     'no-undef': 'off',
     'no-unused-vars': 'off',
     'react/jsx-props-no-spreading': [1, {
-        'custom': 'ignore',
+      custom: 'ignore',
     }],
+    curly: ['error', 'multi'],
+    'nonblock-statement-body-position': ['error', 'below'],
   },
   settings: {
     'import/resolver': {
-      'node': {
+      node: {
         moduleDirectory: ['.', './node_modules'],
-        'extensions': ['js', '.jsx', '.ts', '.tsx']
-      }
-    }
+        extensions: ['js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 }
