@@ -1,4 +1,5 @@
 import Spinner from 'components/templates/spinner'
+import HomeBlogListItem from 'components/home/item'
 
 interface P {
   blogs: BlogItem[]
@@ -18,9 +19,11 @@ const HomeBlogList = ({ blogs, loading }: P) => (
       </>
     )}
 
-    {!loading && blogs.length > 0 && blogs.map(() => (
-      <p>Blog</p>
-    ))}
+    <div id="blogs-list">
+      {!loading && blogs.length > 0 && blogs.map((blog: BlogItem) => (
+        <HomeBlogListItem blog={blog} />
+      ))}
+    </div>
 
   </div>
 )

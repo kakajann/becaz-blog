@@ -8,6 +8,7 @@ type Category = {
 }
 
 type BlogItem = {
+  slug: string
   title: string
   description: string
   author: Author

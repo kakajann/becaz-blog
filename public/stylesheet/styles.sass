@@ -15,12 +15,31 @@ header
     height: 100%
   .logo
     img
-      width: 100px
+      height: 34px
 
 #home 
   display: flex
-  padding: 2em 0
+  justify-content: space-between
+  padding: 4em 0
   #blogs
-    width: 75%
+    width: 60%
   #sidebar
     width: 25%
+
+#blogs-list
+  .blog-item
+    &:not(:last-child)
+      margin-bottom: 4em
+    a.title
+      font-weight: normal
+      font-size: 32px
+      margin: 0 0 10px
+      color: $almostBlack
+      transition: color 180ms ease
+      &:hover
+        color: $baseBlue
+    p
+      font-size: 16px
+      line-height: 26px
+      color: $grayish
+    
