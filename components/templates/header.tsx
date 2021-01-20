@@ -7,7 +7,7 @@ const Header = () => (
       <div className="flex">
         <Link href="/">
           <a href="/" className="logo">
-            <img src="images/logo.svg" alt="Becaz Logo" />
+            <img src="/images/logo.svg" alt="Becaz Logo" />
           </a>
         </Link>
         <a href="https://becaz.com" className="back">

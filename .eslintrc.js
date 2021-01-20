@@ -37,6 +37,7 @@ module.exports = {
     }],
     curly: ['error', 'multi'],
     'nonblock-statement-body-position': ['error', 'below'],
+    'import/no-self-import': 'off',
   },
   settings: {
     'import/resolver': {

@@ -6,7 +6,7 @@ interface P {
 }
 const HomeBlogListItem = ({ blog }: P) => (
   <div className="blog-item">
-    <a href="/" className="title">{blog.title}</a>
+    <a href={`/blog/${blog.key}`} className="title">{blog.title}</a>
     <p>{blog.abstract}</p>
     <span className="author">
       <Icon title="userSolid" size={16} />

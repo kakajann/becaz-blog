@@ -1,42 +1,21 @@
-const cats = [
-  {
-    title: 'Bussiness',
-  },
-  {
-    title: 'Design',
-  },
-  {
-    title: 'Language',
-  },
-  {
-    title: 'Lifestyle',
-  },
-  {
-    title: 'Marketing',
-  },
-  {
-    title: 'Personal Development',
-  },
-  {
-    title: 'Programming & Development',
-  },
-  {
-    title: 'Teacing & Academics',
-  },
-  {
-    title: 'FAQ',
-  },
-  {
-    title: 'Q&A',
-  },
-]
-const HomeCategories = () => (
+import { ReduxRootState } from 'lib/types/redux'
+import { connect } from 'react-redux'
+
+interface P {
+  categories: Category[]
+}
+
+const HomeCategories = ({ categories }: P) => (
   <div id="categories">
     <a href="/" className="active">All Categories</a>
-    {cats.map((category) => (
-      <a href="/" key={category.title}>{category.title}</a>
+    {categories.map((category) => (
+      <a href="/" key={category.id}>{category.title}</a>
     ))}
   </div>
 )
 
-export default HomeCategories
+const mapState = ({ category }: ReduxRootState) => ({
+  categories: category.categories,
+})
+
+export default connect(mapState, {})(HomeCategories)
