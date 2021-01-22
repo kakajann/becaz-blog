@@ -1,7 +1,7 @@
-import BlogService from 'components/blog/service'
-import BlogContent from 'components/blog/content'
 import Layout from 'components/layout'
 import Spinner from 'components/templates/spinner'
+import BlogService from 'components/blog/service'
+import BlogContent from 'components/blog/content'
 
 const Blog = () => (
   <BlogService>
