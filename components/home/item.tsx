@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import moment from 'moment'
 import Icon from 'components/templates/icon'
 
@@ -6,7 +7,9 @@ interface P {
 }
 const HomeBlogListItem = ({ blog }: P) => (
   <div className="blog-item">
-    <a href={`/blog/${blog.key}`} className="title">{blog.title}</a>
+    <Link href={`/blog/${blog.key}`}>
+      <a href={`/blog/${blog.key}`} className="title">{blog.title}</a>
+    </Link>
     <p>{blog.abstract}</p>
     <span className="author">
       <Icon title="userSolid" size={16} />

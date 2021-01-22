@@ -7,7 +7,7 @@ interface P {
 
 const Request = ({ path, method }: P) => {
   const data = axios({
-    url: `api/${path}`,
+    url: `/api/${path}`,
     method,
   })
 
