@@ -3,7 +3,7 @@ import 'public/stylesheet/styles.sass'
 
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import { store, persistor } from 'lib/redux/store'
+import { store, persistor } from 'lib/redux'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <Provider store={store}>
