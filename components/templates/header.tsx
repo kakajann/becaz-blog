@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Icon from 'components/templates/icon'
 
 const Header = () => (
   <header>
