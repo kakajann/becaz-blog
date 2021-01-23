@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from 'components/templates/header'
+import Footer from './templates/footer'
 
 interface P {
   children: React.ReactNode
@@ -16,6 +17,7 @@ const Layout = ({ children, meta }: P) => (
     </Head>
     <Header />
     { children }
+    <Footer />
   </div>
 )
 
