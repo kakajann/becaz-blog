@@ -5,15 +5,19 @@ const Header = () => (
   <header>
     <div className="container">
       <div className="flex">
-        <Link href="/">
-          <a href="/" className="logo">
-            <img src="/images/logo.svg" alt="Becaz Logo" />
-          </a>
-        </Link>
-        <a href="https://becaz.com" className="back">
-          <Icon title="return" size={16} />
-          Back to Becaz.com
+        <a href="https://becaz.com" className="logo">
+          <img src="/images/logo.svg" alt="Becaz Logo" />
         </a>
+        <div className="menu">
+          <Link href="/">
+            <a href="https://becaz.com">
+              Blog becaz
+            </a>
+          </Link>
+          <a href="https://becaz.com/en/courses">
+            Browse Becaz Courses
+          </a>
+        </div>
       </div>
     </div>
   </header>
