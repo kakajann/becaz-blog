@@ -23,7 +23,7 @@ header
       transition: color 180ms ease
       background: #f6f6f6
       border: 1px solid #f6f6f6
-      padding: 12px 18px
+      padding: 9px 22px
       border-radius: 8px
       color: #4B4B4B
       &:not(:last-child)
@@ -38,19 +38,20 @@ header
 #home 
   display: flex
   justify-content: space-between
-  padding: 4em 0
+  padding-top: 4em
+  padding-bottom: 2em
   #blogs
     width: 60%
   #sidebar
-    width: 30%
+    width: 28%
 
 #blogs-list
   .blog-item
     &:not(:last-child)
-      margin-bottom: 4em
+      margin-bottom: 2.5em
     a.title
       font-weight: normal
-      font-size: 32px
+      font-size: 26px
       margin: 0 0 10px
       color: $almostBlack
       transition: color 180ms ease
@@ -87,29 +88,29 @@ header
   display: flex
   input
     border: none
-    border-bottom: 1px solid $grayish
+    border-bottom: 1px solid #B7B7B7
     padding: 10px 15px
     width: 100%
     outline: none
   button
     background: none
     border: none
-    border-bottom: 1px solid $grayish
+    border-bottom: 1px solid #B7B7B7
     width: 50px
     cursor: pointer
     justify-content: center
     @include verticalCentered()
     svg
       path
-        fill: $grayish
+        fill: #B7B7B7
 
 #categories
   display: flex
   flex-direction: column
   margin-top: 2em
   a
-    color: $grayish
-    padding: 15px 25px
+    color: #B7B7B7
+    padding: 10px 25px
     border-radius: 8px
     @include linkTransition()
     &.active
@@ -119,9 +120,21 @@ header
       color: $baseBlue
 
 #blog
-  width: 75%
-  margin: 4em auto
+  width: 65%
+  margin: 2.5em auto
   .content
+    .back
+      display: inline-flex
+      align-items: center
+      @include linkTransition()
+      &:hover
+        color: $baseBlue
+        svg path
+          fill: $baseBlue
+      svg
+        margin-right: 5px
+        path
+          @include linkTransition(fill)
     > h2
       font-size: 28px
       line-height: 42px
@@ -182,9 +195,61 @@ header
       td, th
         border: 2px solid #eee
         padding: 1em
+  .author
+    margin-bottom: 15px
+    @include verticalCentered()
+  .more-info
+    @include verticalCentered(flex)
+  .dash
+    margin: 0 15px
+  .author, .more-info span
+    color: #B7B7B7
+    a
+      color: #B7B7B7
+      @include verticalCentered()
+      @include linkTransition()
+      &:hover
+        color: $baseBlue
+        svg path
+          fill: $baseBlue
+    svg
+      margin-right: 7px
+      path
+        fill: #B7B7B7
+        @include linkTransition(fill)
+  .divide
+    margin: 1.4em 0
+    height: 1px
+    background: #eee
+  .share
+    display: flex
+    align-items: center
+    span
+      margin-right: 9px
 #footer
   padding: 2em 0
   background: #262D41
+  .upper
+    padding-bottom: 2em
+    display: flex
+    justify-content: space-between
+    section
+      width: 25%
+      &:last-child
+        h4
+          text-align: center
+      h4
+        color: #ffffff
+        margin: 0
+        font-weight: normal
+      a
+        font-weight: 200
+        color: #aaa
+        display: block
+        margin-top: 1em
+      img
+        width: 100%
+        margin-top: 2em
   .logo
     display: flex
     align-items: center

@@ -13,7 +13,7 @@ const Header = () => (
               Blog becaz
             </a>
           </Link>
-          <a href="https://becaz.com/en/courses">
+          <a href="https://becaz.com/">
             Browse Becaz Courses
           </a>
         </div>

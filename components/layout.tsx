@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from 'components/templates/header'
-import Footer from './templates/footer'
+import Footer from 'components/templates/footer'
 
 interface P {
   children: React.ReactNode
@@ -15,8 +15,10 @@ const Layout = ({ children, meta }: P) => (
       <meta name="keywords" content={meta?.keywords} />
       <link rel="icon" type="image/png" href="images/favicon.png" />
     </Head>
-    <Header />
-    { children }
+    <div>
+      <Header />
+      { children }
+    </div>
     <Footer />
   </div>
 )
