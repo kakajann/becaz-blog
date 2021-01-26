@@ -3,6 +3,8 @@ type Category = {
   title: string
 }
 
+type SelectedCategory = null | Category
+
 type UpdateCategoryActionPayload = {
   categories: Category
 }

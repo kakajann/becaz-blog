@@ -6,20 +6,28 @@ import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 
 interface P {
-  dispatchUpdateCategories: (payload: Category[]) => void,
+  searchQuery: string
+  selectedCategory: SelectedCategory
+  dispatchUpdateCategories: (payload: Category[]) => void
   children: (data: {
     blogs: BlogItem[]
     loading: boolean
   }) => JSX.Element
 }
 
-const HomeService = ({ dispatchUpdateCategories, children }: P) => {
+const HomeService = ({
+  searchQuery, selectedCategory, dispatchUpdateCategories, children,
+}: P) => {
   const [blogs, setBlogs] = useState<BlogItem[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 
   const fetchArticles = async () => {
+    setLoading(true)
+    setBlogs([])
+    const categoryFilter = selectedCategory ? `catid=${selectedCategory.id}&` : ''
+    const searchFilter = searchQuery.length ? `q=${searchQuery}` : ''
     const { data } = await Request({
-      path: 'public/articles',
+      path: `public/articles?${categoryFilter}${searchFilter}`,
     })
 
     if (data.success)
@@ -38,9 +46,12 @@ const HomeService = ({ dispatchUpdateCategories, children }: P) => {
   }
 
   useEffect(() => {
-    fetchArticles()
     fetchCategories()
   }, [])
+
+  useEffect(() => {
+    fetchArticles()
+  }, [selectedCategory, searchQuery])
 
   return children({
     blogs,
@@ -48,8 +59,9 @@ const HomeService = ({ dispatchUpdateCategories, children }: P) => {
   })
 }
 
-const mapState = ({ category }: ReduxRootState) => ({
-  categories: category.categories,
+const mapState = ({ category, blogs }: ReduxRootState) => ({
+  selectedCategory: category.selectedCategory,
+  searchQuery: blogs.searchQuery,
 })
 
 const mapDispatch = (dispatch: Dispatch) => ({

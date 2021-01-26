@@ -5,4 +5,7 @@ export const updateCategories = (categories: Category[]): types.CategoryActionTy
   payload: categories,
 })
 
-export const quickPrefix = null
+export const setSelectedCategory = (category: SelectedCategory): types.CategoryActionTypes => ({
+  type: types.SET_SELECTED_CATEGORY,
+  payload: category,
+})

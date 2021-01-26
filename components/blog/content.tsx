@@ -9,7 +9,7 @@ const BlogContent = ({ blog }: P) => (
     <div className="time-read">
       <Icon title="clock" size={16} />
       <span>{blog.read_time}</span>
-      min read
+      <span> min read</span>
     </div>
     <div className="in" dangerouslySetInnerHTML={{ __html: blog.body }} />
   </div>

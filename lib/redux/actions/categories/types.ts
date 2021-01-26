@@ -1,9 +1,14 @@
 export const UPDATE_CATEGORIES = 'UPDATE_CATEGORIES'
-export const quickPrefix = null
+export const SET_SELECTED_CATEGORY = 'SET_SELECTED_CATEGORY'
 
 interface UpdateCategoriesAction {
   type: typeof UPDATE_CATEGORIES,
   payload: Category[]
 }
 
-export type CategoryActionTypes = UpdateCategoriesAction
+interface SetSelectedCategory {
+  type: typeof SET_SELECTED_CATEGORY,
+  payload: SelectedCategory
+}
+
+export type CategoryActionTypes = UpdateCategoriesAction | SetSelectedCategory
