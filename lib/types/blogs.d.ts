@@ -2,8 +2,9 @@ type BlogItem = {
   key: string
   title: string
   abstract: string
-  category: string
   body: string
+  'category_title': string
+  'category_id': string
   'author_name': string
   'published_at': string
   'read_time': string,
