@@ -1,3 +1,5 @@
+import Icon from 'components/templates/icon'
+
 const Footer = () => (
   <div id="footer">
     <div className="container">
@@ -32,6 +34,23 @@ const Footer = () => (
       <div className="logo">
         <img src="/images/logo-white.svg" alt="Logo" />
         <span className="cr">&copy; 2021 Becaz. All Rights Reserved.</span>
+        <div className="socials">
+          <a href="https://twitter.com/becazlearning" target="_blank" rel="noreferrer">
+            <Icon title="twitter" size={20} />
+          </a>
+          <a href="https://www.instagram.com/becazlearning/" target="_blank" rel="noreferrer">
+            <Icon title="instagram" size={20} />
+          </a>
+          <a href="https://www.linkedin.com/company/becazlearning/" target="_blank" rel="noreferrer">
+            <Icon title="linkedin" size={20} />
+          </a>
+          <a href="https://t.me/BecazLearning" target="_blank" rel="noreferrer">
+            <Icon title="telegram" size={20} />
+          </a>
+          <a href="https://www.youtube.com/channel/UCB7I6mG5t2svtjhUbMNiGRw" target="_blank" rel="noreferrer">
+            <Icon title="youtube" size={20} />
+          </a>
+        </div>
       </div>
     </div>
   </div>

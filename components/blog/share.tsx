@@ -30,6 +30,11 @@ export default ({ blog }: P) => {
         </a>
       </span>
       <span>
+        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${selfLink}`} target="_blank" rel="noreferrer">
+          <Icon title="linkedin" size={26} color="#0177B5" />
+        </a>
+      </span>
+      <span>
         <a href={`https://t.me/share/url?url=${selfLink}`} target="_blank" rel="noreferrer">
           <Icon title="telegram" size={26} color="#0088cc" />
         </a>

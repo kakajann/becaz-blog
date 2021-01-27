@@ -3,8 +3,34 @@
   padding: 0 1e
 
 header
+  .container
+    height: 65px
   a.back
     font-size: 14px
+  .mobile-burger
+    display: block
+    background: #fff
+    border: none
+    outline: none
+  .menu
+    position: absolute
+    left: 0
+    top: 65px
+    background: #fff
+    width: 100%
+    box-shadow: 0 10px 15px #00000030
+    max-height: 0
+    overflow: hidden
+    transition: max-height 250ms linear
+    &.visible
+      max-height: 350px
+    a
+      display: block
+      margin: 1em auto
+      width: 70%
+      &:not(:last-child)
+        margin-right: auto
+
 
 #home
   flex-direction: column
@@ -14,6 +40,12 @@ header
   #sidebar
     border-top: 1px solid #eeeeee
     margin-top: 2em
+    .sidebar-search
+      display: none
+
+.sidebar-search
+  display: flex
+  margin-bottom: 2em
   
 
 #blogs-list
@@ -21,9 +53,6 @@ header
     a.title
       font-size: 24px
       line-height: 34px
-
-.sidebar-search
-  display: none
 
 #blog
   width: 100%
@@ -33,3 +62,19 @@ header
   .in
     figure
       overflow: scroll
+
+#footer
+  .upper
+    flex-direction: column
+    section
+      width: 100%
+      text-align: center
+      margin-bottom: 2.4em
+      a
+        margin-top: .6em
+      img
+        width: 65%
+  .cr, .logo > img
+    display: none
+  .socials
+    margin: auto

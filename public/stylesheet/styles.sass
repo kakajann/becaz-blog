@@ -17,6 +17,8 @@ header
   .logo
     img
       height: 34px
+  .mobile-burger
+    display: none
   .menu
     a
       justify-content: center
@@ -44,6 +46,8 @@ header
     width: 60%
   #sidebar
     width: 28%
+    .sidebar-search
+      display: flex
 
 #blogs-list
   .blog-item
@@ -85,7 +89,7 @@ header
       margin: 0 15px
 
 .sidebar-search
-  display: flex
+  display: none
   input
     border: none
     border-bottom: 1px solid #B7B7B7
@@ -247,6 +251,9 @@ header
         color: #aaa
         display: block
         margin-top: 1em
+        @include linkTransition()
+        &:hover
+          color: #fff
       img
         width: 100%
         margin-top: 2em
@@ -259,6 +266,24 @@ header
   .cr
     display: inline-block
     color: #fff
+  .socials
+    margin-left: auto
+    a
+      background: rgba(#fff, 0.1)
+      height: 30px
+      width: 30px
+      display: inline-flex
+      -webkit-box-align: center
+      align-items: center
+      -webkit-box-pack: center
+      justify-content: center
+      font-size: 0px
+      border-radius: 6px
+      margin-left: 15px
+      svg
+        path
+          fill: #eee
+      
 
 @media screen and (max-width: 768px)
   @import mobile

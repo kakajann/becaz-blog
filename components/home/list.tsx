@@ -14,8 +14,7 @@ const HomeBlogList = ({ blogs, loading }: P) => (
 
     {!loading && !blogs.length && (
       <>
-        <p>Weird... No blog has found.</p>
-        <p>There may be an unexpected error occured. Please try again in few minutes</p>
+        <p>No blog has found.</p>
       </>
     )}
 
