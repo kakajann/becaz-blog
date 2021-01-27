@@ -21,9 +21,7 @@ const Footer = () => (
         <section>
           <h4>More</h4>
           <a href="https://becaz.com/">Popular courses</a>
-          <a href="https://becaz.com/tr/courses">Discover courses</a>
           <a href="https://becaz.com/tr/faq">FAQ</a>
-          <a href="https://becaz.com/tr/help">Contact us</a>
           <a href="http://becaz.org/buy">Buy Becaz coins (BCZ)</a>
         </section>
         <section>
