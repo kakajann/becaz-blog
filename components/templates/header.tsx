@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Icon from 'components/templates/icon'
 
 const Header = () => {
-  const [isMenuVisible, setMenuVisible] = React.useState<boolean>(false)
+  const [isMenuVisible, setMenuVisible] = useState<boolean>(false)
 
   return (
     <header>
