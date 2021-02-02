@@ -11,6 +11,7 @@ interface P {
   dispatchUpdateCategories: (payload: Category[]) => void
   children: (data: {
     blogs: BlogItem[]
+    featuredCourse: Course
     loading: boolean
   }) => JSX.Element
 }
@@ -19,6 +20,7 @@ const HomeService = ({
   searchQuery, selectedCategory, dispatchUpdateCategories, children,
 }: P) => {
   const [blogs, setBlogs] = useState<BlogItem[]>([])
+  const [featuredCourse, setFeaturedCourse] = useState<Course>({} as Course)
   const [loading, setLoading] = useState<boolean>(true)
 
   const fetchArticles = async () => {
@@ -30,8 +32,10 @@ const HomeService = ({
       path: `public/articles?${categoryFilter}${searchFilter}`,
     })
 
-    if (data.success)
+    if (data.success) {
       setBlogs(data.data.articles)
+      setFeaturedCourse(data.data.course)
+    }
 
     setLoading(false)
   }
@@ -55,6 +59,7 @@ const HomeService = ({
 
   return children({
     blogs,
+    featuredCourse,
     loading,
   })
 }

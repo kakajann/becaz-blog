@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "breakpoint": {
+      "min": 769,
+      "max": 9999
+    },
+    "items": 3
+  },
+  "mobile": {
+    "breakpoint": {
+      "max": 768,
+      "min": 0
+    },
+    "items": 1
+  }
+}

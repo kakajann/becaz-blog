@@ -109,6 +109,123 @@ header
       path
         fill: #B7B7B7
 
+#sidebar-course
+  > h5
+    font-size: 16px
+    color: #2D2D2D
+  > a
+    padding: 8px
+    text-align: center
+    display: block
+    color: $baseBlue
+    border: 1px solid $baseBlue
+    border-radius: 6px
+    margin-top: 1em
+    @include linkTransition(background)
+    &:hover
+      background: lighten(#eee, 2)
+
+#blog-featured-courses
+  > h5
+    font-size: 16px
+    display: flex
+    justify-content: space-between
+    a
+      color: $baseBlue
+  .react-multi-carousel-list
+    margin: 0 -10px
+    padding-bottom: 50px
+    .arrows
+      position: absolute
+      margin-top: 10px
+      bottom: 0
+      left: 50%
+      transform: translate(-50%)
+      button
+        background: $baseBlue
+        border: none
+        padding: 8px
+        border-radius: 8px
+        margin: 0 8px
+        width: 35px
+        height: 35px
+        font-size: 0
+        outline: none
+        cursor: pointer
+        @include linkTransition(background)
+        &:hover
+          background: darken($baseBlue, 5)
+        &:disabled
+          opacity: .6
+        &:last-child
+          svg
+            transform: rotate(180deg)
+        svg path
+          fill: #fff
+  .course-wrapper
+    padding: 10px
+
+.course
+  box-shadow: rgb(0 0 0 / 5%) 1px 1px 16px 4px
+  background: #fff
+  border-radius: 6px
+  overflow: hidden
+  .thumbnail
+    position: relative
+    img
+      width: 100%
+    .category
+      position: absolute
+      background: rgba(#000, 0.35)
+      font-size: 13px
+      color: #fff
+      border-radius: 8px
+      padding: 2px 8px
+      left: 1em
+      top: 10px
+  .info
+    padding: 1em
+    .title
+      font-size: 16px
+      line-height: 22px
+      font-weight: bold
+      height: 44px
+      margin-bottom: 0px
+      text-decoration: none
+      display: block
+      overflow: hidden
+    .user
+      display: block
+      color: rgb(170, 170, 170)
+      width: 100%
+      font-size: 15px
+      margin-top: 5px
+    .level
+      display: inline-block
+      margin-top: 25px
+      background: rgba(#000, 0.024)
+      color: rgb(112, 112, 112)
+      padding: 2px 6px
+      border-radius: 6px
+      font-size: 15px
+    .more
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 1em
+      .rating
+        font-size: 0
+        display: flex
+        align-items: center
+        span
+          font-size: 16px
+          color: #fbc531
+          font-weight: bold
+          margin-left: 8px
+      .price
+        font-weight: bold
+        letter-spacing: 0.4px
+  
 #categories
   display: flex
   flex-direction: column
@@ -232,6 +349,7 @@ header
     align-items: center
     span
       margin-right: 9px
+
 #footer
   padding: 2em 0
   background: #262D41

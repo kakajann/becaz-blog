@@ -5,6 +5,7 @@ import Request from 'lib/helpers/request'
 interface P {
   children: (data: {
     blog: BlogItem | undefined
+    featuredCourses: Course[]
     loading: boolean
   }) => JSX.Element
 }
@@ -14,6 +15,7 @@ const BlogService = ({ children }: P) => {
   const { key } = router.query
 
   const [blog, setBlog] = useState<BlogItem>()
+  const [featuredCourses, setFeaturedCourses] = useState<Course[]>([])
   const [loading, setLoading] = useState<boolean>(true)
 
   const fetchBlog = async () => {
@@ -21,8 +23,10 @@ const BlogService = ({ children }: P) => {
       path: `public/articles/${key}`,
     })
 
-    if (data.success)
+    if (data.success) {
       setBlog(data.data.article)
+      setFeaturedCourses(data.data.courses)
+    }
 
     setLoading(false)
   }
@@ -35,6 +39,7 @@ const BlogService = ({ children }: P) => {
   return children({
     blog,
     loading,
+    featuredCourses,
   })
 }
 

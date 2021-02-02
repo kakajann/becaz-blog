@@ -7,14 +7,17 @@ import SearchBar from 'components/home/search'
 const index = () => (
   <Layout>
     <HomeService>
-      {({ blogs, loading }) => (
+      {({ blogs, featuredCourse, loading }) => (
         <div id="home" className="container">
           <SearchBar />
           <HomeBlogList
             blogs={blogs}
             loading={loading}
           />
-          <HomeSidebar />
+          <HomeSidebar
+            featuredCourse={featuredCourse}
+            loading={loading}
+          />
         </div>
       )}
     </HomeService>
