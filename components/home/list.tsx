@@ -14,7 +14,7 @@ const HomeBlogList = ({ blogs, loading }: P) => (
 
     {!loading && !blogs.length && (
       <>
-        <p>No blog has found.</p>
+        <p>No blog was found.</p>
       </>
     )}
 

@@ -9,7 +9,7 @@ const Course = ({ course }: P) => (
   <div className="course">
     <a href={`https://becaz.com/tr/courses/preview/${course.details.key}`}>
       <div className="thumbnail">
-        <div className="category">Bussiness</div>
+        <div className="category">{course.category.title}</div>
         <img src={course.details.thumbnail} alt={course.details.title} />
       </div>
       <div className="info">
