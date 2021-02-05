@@ -3,3 +3,5 @@ type Meta = {
   description?: string
   keywords?: string
 }
+
+type Lang = 'en' | 'tr'

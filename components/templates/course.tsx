@@ -1,4 +1,4 @@
-import { authorFullName } from 'lib/helpers'
+import { authorFullName, getLang } from 'lib/helpers'
 import Icon from 'components/templates/icon'
 
 interface P {
@@ -7,7 +7,7 @@ interface P {
 
 const Course = ({ course }: P) => (
   <div className="course">
-    <a href={`https://becaz.com/tr/courses/preview/${course.details.key}`}>
+    <a href={`https://becaz.com/${getLang()}/courses/preview/${course.details.key}`}>
       <div className="thumbnail">
         <div className="category">{course.category.title}</div>
         <img src={course.details.thumbnail} alt={course.details.title} />
