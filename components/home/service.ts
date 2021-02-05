@@ -1,4 +1,3 @@
-import { getLang } from 'lib/helpers'
 import Request from 'lib/helpers/request'
 import { updateCategories } from 'lib/redux/actions/categories'
 import { ReduxRootState } from 'lib/types/redux'
