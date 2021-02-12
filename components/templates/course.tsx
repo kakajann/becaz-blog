@@ -27,12 +27,23 @@ const Course = ({ course }: P) => (
           </div>
           <span className="price">
             {parseInt(course.details.prices.usd, 2) > 0 ? (
-              <span>
-                $
-                {course.details.fixed_prices.applices
-                  ? course.details.fixed_prices.usd
-                  : course.details.prices.usd}
-              </span>
+              <>
+                {
+                  course.details.fixed_prices.applies
+                  && parseInt(course.details.prices.usd, 2) > 0 && (
+                  <span className="old-price">
+                    $
+                    {course.details.prices.usd}
+                  </span>
+                  )
+                }
+                <span>
+                  $
+                  {course.details.fixed_prices.applies
+                    ? course.details.fixed_prices.usd
+                    : course.details.prices.usd}
+                </span>
+              </>
             ) : <span>Free</span>}
           </span>
         </div>

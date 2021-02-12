@@ -11,7 +11,7 @@ type CourseCategory = {
 
 type CourseFixedPrices = {
   usd: string
-  applices: boolean
+  applies: boolean
 }
 
 type CoursePrices = {
